@@ -1,0 +1,66 @@
+@mixin button {
+  font-size: 1rem;
+  text-align: center;
+  background-color: transparent;
+  display: inline-block;
+  margin: 1em*5/16 1em*10/16;
+  padding: 1em*10/16 1em*30/16;
+  border-radius: 1em*4/16;
+  line-height: 1em*25/16;
+  font-weight: 300;
+  letter-spacing: 1em*2/16;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.transparentButton {
+  @include button;
+  border: 1px solid #fff;
+  &:hover, &:active{
+    transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+    border-color: #2e9dff;
+    color: #2e9dff;
+  }
+}
+
+.blueButton{
+  @include button;
+  background-color: #69b9ff;
+  transition: background-color 300ms ease;
+  &:hover, &:active{
+    transition: background-color 300ms ease;
+    background-color: #2e9dff;
+  }
+}
+
+//ver mejor forma de hacer la galeria
+.tabButton{
+  @include button;
+  &:hover, &:active, &:focus{
+    transition: background-color 300ms ease;
+    background-color: #2e80b6;
+  }
+}
+
+.activateTabButton{
+  @include button;
+  background-color: #92a0ad;
+  transition: background-color 3000ms;
+  background-color: #2e80b6;
+}
+
+.deactivateTabButton{
+  @include button;
+  background-color: #2e80b6;
+  transition: background-color 3000ms;
+  background-color: #92a0ad;
+  &:hover, &:active, &:focus{
+    transition: background-color 300ms ease;
+    background-color: #2e80b6;
+  }
+}

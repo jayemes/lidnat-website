@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAA;EACR,OAAO,EAAE,QAAS;EAClB,gBAAgB,EAAE,OAAO;EACzB,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "Subfooter.module.scss"
+    ],
+    "names": [],
+    "file": "Subfooter.module.css"
+}

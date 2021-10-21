@@ -1,0 +1,35 @@
+.text, .listItem {
+  color: #6a859c;
+  margin-bottom: 0.71429em;
+  font-size: 0.875rem;
+  line-height: 1.78571em;
+  font-weight: 300;
+}
+
+.listItem {
+  color: #668cad;
+  border-bottom: 1px solid #d5d5e0;
+  line-height: 1.42857em;
+  margin-bottom: 0.42857em;
+  padding-bottom: 0.71429em;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image {
+  width: 20px;
+  margin-right: 0.5em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+/*# sourceMappingURL=ContentText.module.css.map */

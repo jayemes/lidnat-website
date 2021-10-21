@@ -1,0 +1,18 @@
+.h1 {
+  //typography
+  color: #69b9ff;
+  font-size: 1.5625rem;
+  font-weight: 300;
+  letter-spacing: 1em*4/(1.5625*16);
+  line-height: 1em;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+}

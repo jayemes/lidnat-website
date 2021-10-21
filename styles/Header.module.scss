@@ -1,0 +1,19 @@
+.wrapper{
+  background: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  position: absolute;
+}
+
+.header{
+  background: #fff;
+  width: 100%;
+  max-width: 940px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav{
+  display: flex;
+}
