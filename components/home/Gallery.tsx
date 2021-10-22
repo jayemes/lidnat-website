@@ -1,4 +1,4 @@
-import GetContent from "../../helpers/GetContent";
+import getContent from "../../helpers/GetContent";
 import styles from "../../styles/Gallery.module.css";
 import Image from "next/dist/client/image";
 import Button from "../shared/Button";
@@ -9,9 +9,10 @@ import img2 from "../../public/assets/showcase/2.jpg";
 import img3 from "../../public/assets/showcase/3.jpeg";
 
 import { useRef, useState } from "react";
+import { GalleryProps } from "../../types/interfaces";
 
-const Gallery = (): JSX.Element => {
-  const { getContentByLabel } = GetContent();
+const Gallery = (props: GalleryProps): JSX.Element => {
+  const { getContentByLabel } = getContent();
   const activeButtonStyle = buttonStyles.activateTabButton;
   const inactiveButtonStyle = buttonStyles.deactivateTabButton;
   const [button1Style, setButton1Style] = useState(activeButtonStyle);
@@ -36,7 +37,7 @@ const Gallery = (): JSX.Element => {
       line2: getContentByLabel("showcase_1.2"), //redux store
       line3: getContentByLabel("showcase_1.3"), //redux store
       setFrame: setFrame1Style, //state
-      setButton: setButton1Style, //state
+      setButton: setButton1Style //state
     },
     {
       id: 2,
@@ -52,7 +53,7 @@ const Gallery = (): JSX.Element => {
       line2: getContentByLabel("showcase_2.2"), //redux store
       line3: getContentByLabel("showcase_2.3"), //redux store
       setFrame: setFrame2Style, //state
-      setButton: setButton2Style, //state
+      setButton: setButton2Style //state
     },
     {
       id: 3,
@@ -68,8 +69,8 @@ const Gallery = (): JSX.Element => {
       line2: getContentByLabel("showcase_3.2"), //redux store
       line3: getContentByLabel("showcase_3.3"), //redux store
       setFrame: setFrame3Style, //state
-      setButton: setButton3Style, //state
-    },
+      setButton: setButton3Style //state
+    }
   ];
 
   const tabElements = galleryHandler.map((item) => {
@@ -87,11 +88,11 @@ const Gallery = (): JSX.Element => {
           active?.setButton(activeButtonStyle);
           inactive?.setButton(inactiveButtonStyle);
           inactive?.setFrame(styles.hideFrame);
-          setTimeout(() => {
-            inactive.frameRef.current.style.display = "none";
-            active.frameRef.current.style.display = "block";
-            active?.setFrame(styles.showFrame);
-          }, 150);
+          // setTimeout(() => {
+          //   inactive.frameRef.current.style.display = "none";
+          //   active.frameRef.current.style.display = "block";
+          //   active?.setFrame(styles.showFrame);
+          // }, 150);
         }}
       >
         <Button styles={item.buttonStyle} content={item.button} />

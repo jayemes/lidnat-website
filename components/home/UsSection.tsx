@@ -2,7 +2,7 @@ import { NextComponentType } from "next";
 
 import styles from "../../styles/Section.module.css";
 
-import GetContent from "../../helpers/GetContent";
+import getContent from "../../helpers/GetContent";
 
 import Card from "../shared/Card";
 
@@ -11,7 +11,7 @@ import card2 from "../../public/assets/card2.svg";
 import card3 from "../../public/assets/card3.svg";
 
 const UsSection: NextComponentType = (): JSX.Element => {
-  const { getContentByLabel } = GetContent();
+  const { getContentByLabel } = getContent();
   return (
     <section className={styles.section}>
       <h2 className={styles.heading}>{getContentByLabel("section_h_light")}</h2>

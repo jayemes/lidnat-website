@@ -1,7 +1,7 @@
 import { NextComponentType } from "next";
 
 import Service from "../shared/Service";
-import GetContent from "../../helpers/GetContent";
+import getContent from "../../helpers/GetContent";
 
 import styles from "../../styles/Section.module.css";
 import buttonStyles from "../../styles/Button.module.css";
@@ -10,7 +10,7 @@ import service1 from "../../public/assets/service1.jpeg";
 import service2 from "../../public/assets/service2.jpeg";
 
 const ServicesSection: NextComponentType = (): JSX.Element => {
-  const { getContentByLabel } = GetContent();
+  const { getContentByLabel } = getContent();
   return (
     <section className={styles.sectionDark}>
       <h2 className={styles.headingDark}>

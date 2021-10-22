@@ -1,6 +1,6 @@
 import { NextComponentType } from "next";
 
-import GetContent from "../../helpers/GetContent";
+import getContent from "../../helpers/GetContent";
 
 import Button from "../shared/Button";
 
@@ -8,7 +8,7 @@ import buttonStyles from "../../styles/Button.module.css";
 import styles from "../../styles/HeroSection.module.css";
 
 const HeroSection: NextComponentType = (): JSX.Element => {
-  const { getContentByLabel } = GetContent();
+  const { getContentByLabel } = getContent();
   return (
     <section className={styles.section}>
       <h1 className={styles.heroHeading}>

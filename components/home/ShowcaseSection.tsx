@@ -1,10 +1,10 @@
 import { NextComponentType } from "next";
-import GetContent from "../../helpers/GetContent";
+import getContent from "../../helpers/GetContent";
 import styles from "../../styles/Section.module.css";
 import Gallery from "./Gallery";
 
 const ShowcaseSection: NextComponentType = (): JSX.Element => {
-  const { getContentByLabel } = GetContent();
+  const { getContentByLabel } = getContent();
 
   return (
     <section className={styles.section}>
