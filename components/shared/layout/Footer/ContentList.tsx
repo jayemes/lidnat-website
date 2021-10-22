@@ -1,9 +1,9 @@
-import GetContent from "../../../../helpers/GetContent";
+import getContent from "../../../../helpers/GetContent";
 import { ContentListProps } from "../../../../types/interfaces";
 import Image from "next/dist/client/image";
 import styles from "../../../../styles/ContentText.module.css";
 const ContentList = (props: ContentListProps): JSX.Element => {
-  const { getContentByLabel } = GetContent();
+  const { getContentByLabel } = getContent();
 
   const content = props.content?.map((item, index) => {
     if (item.icon) {
