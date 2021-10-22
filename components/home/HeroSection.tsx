@@ -1,9 +1,6 @@
 import { NextComponentType } from "next";
 
-import Button from "../shared/Button";
-
-import buttonStyles from "../../styles/Button.module.css";
-import styles from "../../styles/HeroSection.module.css";
+import styles from "../../styles/HeroSection.module.scss";
 import { useGetContentByLabel } from "../../redux/selectors";
 
 const HeroSection: NextComponentType = (): JSX.Element => {
@@ -14,16 +11,6 @@ const HeroSection: NextComponentType = (): JSX.Element => {
       </h1>
       <div className={styles.heroSubheading}>
         {useGetContentByLabel("hero_subheading")}
-      </div>
-      <div>
-        <Button
-          styles={buttonStyles.blueButton}
-          content={useGetContentByLabel("hero_button_1")}
-        />
-        <Button
-          styles={buttonStyles.transparentButton}
-          content={useGetContentByLabel("hero_button_2")}
-        />
       </div>
     </section>
   );
