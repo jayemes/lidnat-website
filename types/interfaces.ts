@@ -23,10 +23,6 @@ export interface ServiceProps {
   buttonStyles: string;
 }
 
-export interface GalleryProps {
-  activeTab: number;
-}
-
 export interface TitleProps {
   content: string | undefined;
 }
