@@ -10,7 +10,7 @@ const Social: NextComponentType = (): JSX.Element => {
   ];
   return (
     <div>
-      <Title content={"f_social"}></Title>
+      <Title content={"f_social"}/>
       <ContentList content={content} />
     </div>
   );

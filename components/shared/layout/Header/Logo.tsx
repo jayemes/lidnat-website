@@ -1,11 +1,14 @@
 import { NextComponentType } from "next";
-import getContent from "../../../../helpers/GetContent";
 import styles from "../../../../styles/Logo.module.css";
+import { useGetContentByLabel } from "../../../../redux/selectors";
+
 const Logo: NextComponentType = (): JSX.Element => {
-  const { getContentByLabel } = getContent();
+
+  const brandText = useGetContentByLabel("brand_text")
+
   return (
     <div className={styles.wrapper}>
-      <h1 className={styles.h1}>{getContentByLabel("brand_text")}</h1>
+      <h1 className={styles.h1}>{brandText}</h1>
     </div>
   );
 };

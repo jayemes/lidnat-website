@@ -1,11 +1,13 @@
 import { NextComponentType } from "next";
-import getContent from "../../../../helpers/GetContent";
 import styles from "../../../../styles/NavButton.module.css";
+import { useGetContentByLabel } from "../../../../redux/selectors";
 
 const ContactButton: NextComponentType = (): JSX.Element => {
-  const { getContentByLabel } = getContent();
+
+  const text = useGetContentByLabel("nav_contact");
+
   return (
-    <div className={styles.navContact}>{getContentByLabel("nav_contact")}</div>
+    <div className={styles.navContact}>{text}</div>
   );
 };
 

@@ -11,7 +11,7 @@ const Links: NextComponentType = (): JSX.Element => {
   ];
   return (
     <div>
-      <Title content={"f_links"}></Title>
+      <Title content={"f_links"}/>
       <ContentList content={content} />
     </div>
   );

@@ -1,4 +1,4 @@
-import getContent from "../../helpers/GetContent";
+
 import styles from "../../styles/Gallery.module.css";
 import Image from "next/dist/client/image";
 import Button from "../shared/Button";
@@ -10,9 +10,9 @@ import img3 from "../../public/assets/showcase/3.jpeg";
 
 import { useRef, useState } from "react";
 import { GalleryProps } from "../../types/interfaces";
+import { useGetContentByLabel } from "../../redux/selectors";
 
 const Gallery = (props: GalleryProps): JSX.Element => {
-  const { getContentByLabel } = getContent();
   const activeButtonStyle = buttonStyles.activateTabButton;
   const inactiveButtonStyle = buttonStyles.deactivateTabButton;
   const [button1Style, setButton1Style] = useState(activeButtonStyle);
@@ -31,11 +31,11 @@ const Gallery = (props: GalleryProps): JSX.Element => {
       buttonRef: useRef(null),
       frameRef: useRef(null),
       frameStyle: frame1Style, //state
-      button: getContentByLabel("showcase_button_1"), //redux store
-      title: getContentByLabel("showcase_label_1"), //redux store
-      line1: getContentByLabel("showcase_1.1"), //redux store
-      line2: getContentByLabel("showcase_1.2"), //redux store
-      line3: getContentByLabel("showcase_1.3"), //redux store
+      button: useGetContentByLabel("showcase_button_1"), //redux store
+      title: useGetContentByLabel("showcase_label_1"), //redux store
+      line1: useGetContentByLabel("showcase_1.1"), //redux store
+      line2: useGetContentByLabel("showcase_1.2"), //redux store
+      line3: useGetContentByLabel("showcase_1.3"), //redux store
       setFrame: setFrame1Style, //state
       setButton: setButton1Style //state
     },
@@ -47,11 +47,11 @@ const Gallery = (props: GalleryProps): JSX.Element => {
       buttonRef: useRef(null),
       frameRef: useRef(null),
       frameStyle: frame2Style, //state
-      button: getContentByLabel("showcase_button_2"), //redux store
-      title: getContentByLabel("showcase_label_2"), //redux store
-      line1: getContentByLabel("showcase_2.1"), //redux store
-      line2: getContentByLabel("showcase_2.2"), //redux store
-      line3: getContentByLabel("showcase_2.3"), //redux store
+      button: useGetContentByLabel("showcase_button_2"), //redux store
+      title: useGetContentByLabel("showcase_label_2"), //redux store
+      line1: useGetContentByLabel("showcase_2.1"), //redux store
+      line2: useGetContentByLabel("showcase_2.2"), //redux store
+      line3: useGetContentByLabel("showcase_2.3"), //redux store
       setFrame: setFrame2Style, //state
       setButton: setButton2Style //state
     },
@@ -63,11 +63,11 @@ const Gallery = (props: GalleryProps): JSX.Element => {
       buttonRef: useRef(null),
       frameRef: useRef(null),
       frameStyle: frame3Style, //state
-      button: getContentByLabel("showcase_button_3"), //redux store
-      title: getContentByLabel("showcase_label_3"), //redux store
-      line1: getContentByLabel("showcase_3.1"), //redux store
-      line2: getContentByLabel("showcase_3.2"), //redux store
-      line3: getContentByLabel("showcase_3.3"), //redux store
+      button: useGetContentByLabel("showcase_button_3"), //redux store
+      title: useGetContentByLabel("showcase_label_3"), //redux store
+      line1: useGetContentByLabel("showcase_3.1"), //redux store
+      line2: useGetContentByLabel("showcase_3.2"), //redux store
+      line3: useGetContentByLabel("showcase_3.3"), //redux store
       setFrame: setFrame3Style, //state
       setButton: setButton3Style //state
     }
