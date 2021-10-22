@@ -9,8 +9,7 @@ export const fetchParsedData = createAsyncThunk(
       "https://docs.google.com/spreadsheets/d/e/2PACX-1vRnvnjZ4R5L5EYGAGVUTmkLJm9Re2RKpIoEHqqMBogNhKR2t0TKgiLU3-pafR1L0nTK78hk1s1baybJ/pub?gid=0&single=true&output=csv"
     );
     const text = await res.text();
-    const parsedData = Papa.parse(text, { header: true }).data as Content[];
-    return parsedData;
+    return Papa.parse(text, { header: true }).data as Content[];
   }
 );
 

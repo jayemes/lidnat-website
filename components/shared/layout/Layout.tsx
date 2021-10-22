@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutChildren): JSX.Element => {
 
   useEffect(() => {
     dispatch(fetchParsedData());
-  }, []);
+  }, [dispatch]);
 
   const requestStatus = useAppSelector((state) => state.content.requestStatus);
 
@@ -42,6 +42,16 @@ const Layout = ({ children }: LayoutChildren): JSX.Element => {
       <Head>
         <title>Velocity</title>
         <meta name="viewport" content="initial-scale=1.0, width=300" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       {renderSwitch(requestStatus)}
     </>

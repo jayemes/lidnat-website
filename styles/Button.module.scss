@@ -38,7 +38,6 @@
   }
 }
 
-//ver mejor forma de hacer la galeria
 .tabButton{
   @include button;
   &:hover, &:active, &:focus{
@@ -49,18 +48,16 @@
 
 .activateTabButton{
   @include button;
-  background-color: #92a0ad;
-  transition: background-color 3000ms;
+  transition: background-color 300ms;
   background-color: #2e80b6;
 }
 
 .deactivateTabButton{
   @include button;
-  background-color: #2e80b6;
-  transition: background-color 3000ms;
+  transition: background-color 300ms;
   background-color: #92a0ad;
   &:hover, &:active, &:focus{
     transition: background-color 300ms ease;
-    background-color: #2e80b6;
+    background-color: darken(#2e80b6, 20);
   }
 }

@@ -1,18 +1,18 @@
 import { NextComponentType } from "next";
-import GetContent from "../../helpers/GetContent";
 import styles from "../../styles/Section.module.css";
 import Gallery from "./Gallery";
+import { useGetContentByLabel } from "../../redux/selectors";
 
 const ShowcaseSection: NextComponentType = (): JSX.Element => {
-  const { getContentByLabel } = GetContent();
-
   return (
     <section className={styles.section}>
-      <h2 className={styles.heading}>{getContentByLabel("showcase_title")}</h2>
+      <h2 className={styles.heading}>
+        {useGetContentByLabel("showcase_title")}
+      </h2>
       <div className={styles.subheading}>
-        {getContentByLabel("showcase_subtitle")}
+        {useGetContentByLabel("showcase_subtitle")}
       </div>
-      <Gallery activeTab={0} />
+      <Gallery />
     </section>
   );
 };

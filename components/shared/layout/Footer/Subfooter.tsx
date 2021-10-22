@@ -1,12 +1,11 @@
 import { NextComponentType } from "next";
-import GetContent from "../../../../helpers/GetContent";
 import styles from "../../../../styles/Subfooter.module.css";
-const Subfooter: NextComponentType = (): JSX.Element => {
-  const { getContentByLabel } = GetContent();
+import { useGetContentByLabel } from "../../../../redux/selectors";
 
-  return (
-    <div className={styles.subfooter}>{getContentByLabel("f_copyright")}</div>
-  );
+const Subfooter: NextComponentType = (): JSX.Element => {
+  const text = useGetContentByLabel("f_copyright");
+
+  return <div className={styles.subfooter}>{text}</div>;
 };
 
 export default Subfooter;

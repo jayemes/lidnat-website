@@ -1,4 +1,4 @@
-import { MutableRefObject } from "react";
+import React from "react";
 
 export interface LayoutChildren {
   children: React.ReactNode;
@@ -21,10 +21,6 @@ export interface ServiceProps {
   text: string | undefined;
   buttonContent: string | undefined;
   buttonStyles: string;
-}
-
-export interface GalleryProps {
-  activeTab: number;
 }
 
 export interface TitleProps {
