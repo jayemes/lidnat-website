@@ -1,16 +1,16 @@
-.wrapper{
+.wrapper {
   padding: 15px 25px 15px;
   max-width: 480px;
   color: #fff;
   text-align: center;
 }
 
-.image{
+.image {
   display: inline-block;
   margin-bottom: 20px;
 }
 
-.heading{
+.heading {
   font-size: 1.25rem;
   line-height: 1.5em;
   font-weight: 300;
@@ -20,7 +20,7 @@
   margin-top: 0;
 }
 
-.text{
+.text {
   margin-top: 1em*10/14;
   font-size: 0.875rem;
   line-height: 1em*25/14;
@@ -28,51 +28,53 @@
   margin-bottom: 1em*20/14;
 }
 
-.modalContainer{
+.modalContainer {
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  overflow: auto;
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.75);
-  visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(10px);
+
 }
 
-.modalWrapper{
+.modalWrapper {
   @extend .wrapper;
   max-width: none;
-  margin: 6%;
+  width: min(100%, 1000px);
+  margin: 0 auto;
   padding: 6%;
   background-color: rgba(0, 0, 0, 0.8);
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start
 }
 
-.modalImage{
+.modalImage {
   @extend .image;
+  position: relative;
+  height: 300px;
+  width: 100%;
 }
 
-.modalHeading{
+.modalHeading {
   @extend .heading;
   font-size: 1.75rem
 }
 
-.modalText{
+.modalText {
   @extend .text;
   font-size: 0.95rem;
 }
 
-.modalCloseButton{
+.modalCloseButton {
   width: 6%;
   min-width: 2rem;
   background-color: rgba(255, 255, 255, 0.5);
@@ -81,7 +83,8 @@
   align-items: center;
   justify-content: center;
   align-self: center;
-  &:hover{
+
+  &:hover {
     cursor: pointer;
   }
 }
