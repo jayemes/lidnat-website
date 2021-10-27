@@ -14,9 +14,3 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   );
 }
 export default MyApp;
-
-/****************
-✅ setup redux store
-✅ set data to global state in Layout.tsx
-...setup SSG of data fetch in _app.tsx ?
-****************/
